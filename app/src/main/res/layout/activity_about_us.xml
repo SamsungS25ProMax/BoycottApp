@@ -27,7 +27,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/header_background"
         app:layout_constraintTop_toTopOf="@id/header_background"
-        app:layout_constraintStart_toStartOf="parent"a
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 
