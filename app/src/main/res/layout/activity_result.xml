@@ -17,6 +17,24 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- BACK BUTTON ADDED HERE -->
+
+
+    <TextView
+        android:id="@+id/toggleBg"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="56dp"
+        android:gravity="center"
+        android:text="Product Result"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/icon_back"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageButton
         android:id="@+id/icon_back"
         android:layout_width="48dp"
@@ -27,26 +45,11 @@
         android:padding="12dp"
         android:scaleType="fitCenter"
         android:src="@drawable/balabak"
-        app:tint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="@+id/toggleBg"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toggleBg" />
-
-    <TextView
-        android:id="@+id/toggleBg"
-        android:layout_width="0dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="56dp"
-        android:gravity="center"
-        android:text="Product Alternative For CocaCola"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/icon_back"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="@+id/toggleBg"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="#FFFFFF" />
 
     <ImageView
         android:id="@+id/productImage"
@@ -143,6 +146,7 @@
         app:layout_constraintTop_toBottomOf="@+id/mainCard">
 
         <TextView
+            android:id="@+id/tvReason"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="16dp"
@@ -198,7 +202,6 @@
         android:layout_marginEnd="24dp"
         android:backgroundTint="#FFFFFF"
         android:text="Alternative"
-        android:onClick="alternativeClicked"
         android:textColor="#4CAF50"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -243,8 +246,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/floatingNavContainer"
-        android:layout_width="374dp"
-        android:layout_height="81dp"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="20dp"
         app:cardCornerRadius="35dp"
@@ -256,7 +259,7 @@
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNav"
             android:layout_width="match_parent"
-            android:layout_height="94dp"
+            android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:itemIconTint="#9CA3AF"
             app:itemRippleColor="#3B82F6"

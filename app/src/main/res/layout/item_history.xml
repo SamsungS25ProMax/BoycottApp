@@ -44,7 +44,7 @@
             android:id="@+id/tvCompanyName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="The Coca-Cola Company"
+            android:text="Product Company"
             android:textColor="#6B7280"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
