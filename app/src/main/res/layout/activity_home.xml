@@ -71,6 +71,7 @@
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:text="Scan Barcode via Camera"
+        android:onClick="backButton"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:textStyle="bold"
