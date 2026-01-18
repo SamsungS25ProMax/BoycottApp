@@ -92,6 +92,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         TextView tvStatus = findViewById(R.id.tvRecommended);
         TextView tvName = findViewById(R.id.tvItemName);
         TextView tvReason = findViewById(R.id.tvReason);
+        TextView tvCompanyName = findViewById(R.id.tvCompanyName);
         ImageView imgProduct = findViewById(R.id.productImage);
         ImageView ivStatusIcon = findViewById(R.id.ivClose);
         MaterialCardView reasonCard = findViewById(R.id.redCard);
@@ -100,6 +101,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         ImageButton btnBack = findViewById(R.id.icon_back);
 
         tvName.setText(currentProduct.getName());
+        tvCompanyName.setText(currentProduct.getCompanyName());
         imgProduct.setImageResource(currentProduct.getImageResId());
 
         if (currentProduct.isBoycotted()) {
@@ -129,7 +131,24 @@ public class ProductDetailActivity extends AppCompatActivity {
         btnBack.setOnClickListener(v -> finish());
 
         btnAlt.setOnClickListener(v -> {
-            Toast.makeText(this, currentProduct.getAlternative(), Toast.LENGTH_LONG).show();
+            // 1. Check if the product is boycotted
+            if (currentProduct.isBoycotted()) {
+
+                // 2. Identify the alternative name (e.g., "Life Cola")
+                // Using your getAlternative() method which stores strings like "Try: 100Plus"
+                // or you can use a specific getter if you added alternativeName to your model
+                String altName = currentProduct.getAlternative();
+
+                // 3. Create Intent using 'ProductDetailActivity.this' instead of 'context'
+                Intent intent = new Intent(ProductDetailActivity.this, AlternativeActivity.class);
+
+                // 4. Pass the alternative identifier to the next page
+                intent.putExtra("ALT_NAME_KEY", altName);
+
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "This product is already safe!", Toast.LENGTH_SHORT).show();
+            }
         });
     }
 

@@ -9,9 +9,10 @@ public class Product {
     private boolean isBookmarked;
     private int imageResId;      // The ID of the image in your drawable folder
     private String reason;       // Why is it boycotted?
-    private String alternative;  // What should I buy instead?
+    private String alternative;// What should I buy instead?
+    private String alternativeName;
 
-    public Product(String barcodeId, String name, String companyName, String category, boolean isBoycotted, int imageResId, String reason, String alternative) {
+    public Product(String barcodeId, String name, String companyName, String category, boolean isBoycotted, int imageResId, String reason, String alternative, String alternativeName) {
         this.barcodeId = barcodeId;
         this.name = name;
         this.companyName = companyName;
@@ -20,6 +21,7 @@ public class Product {
         this.imageResId = imageResId;
         this.reason = reason;
         this.alternative = alternative;
+        this.alternativeName = alternativeName;
         this.isBookmarked = false; // Default to false
     }
 
@@ -32,6 +34,8 @@ public class Product {
     public int getImageResId() { return imageResId; }
     public String getReason() { return reason; }
     public String getAlternative() { return alternative; }
+    public String getAlternativeName() { return alternativeName; }
+
     public boolean isBookmarked() { return isBookmarked; }
 
     // --- SETTERS ---

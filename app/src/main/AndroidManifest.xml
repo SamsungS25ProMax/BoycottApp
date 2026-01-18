@@ -27,6 +27,7 @@
         <activity android:name=".ScanCodeActivity" />
         <activity android:name=".ProductDetailActivity" />
         <activity android:name=".CategoryListActivity" />
+        <activity android:name=".AlternativeActivity" />
     </application>
 
 </manifest>
