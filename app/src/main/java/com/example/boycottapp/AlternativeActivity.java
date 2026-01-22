@@ -78,6 +78,7 @@ public class AlternativeActivity extends AppCompatActivity {
         ImageView imgProduct = findViewById(R.id.productImage);
         Switch favToggle = findViewById(R.id.favoriteToggle);
 
+
         // Update basic details
         if (tvName != null) tvName.setText(product.getName());
         if (tvCompanyName != null) tvCompanyName.setText(product.getCompanyName());
